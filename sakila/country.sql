@@ -1,0 +1,6 @@
+CREATE TABLE sakila.country (
+  country_id SMALLINT NOT NULL AUTOINCREMENT,
+  country VARCHAR(50) NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY  (country_id)
+);

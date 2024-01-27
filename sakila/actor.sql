@@ -1,0 +1,7 @@
+CREATE TABLE sakila.actor (
+  actor_id SMALLINT NOT NULL AUTOINCREMENT,
+  first_name VARCHAR(45) NOT NULL,
+  last_name VARCHAR(45) NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY  (actor_id)
+);

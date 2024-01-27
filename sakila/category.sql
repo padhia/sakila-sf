@@ -1,0 +1,6 @@
+CREATE TABLE sakila.category (
+  category_id TINYINT NOT NULL AUTOINCREMENT,
+  name VARCHAR(25) NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY  (category_id)
+);

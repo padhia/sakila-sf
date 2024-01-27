@@ -1,0 +1,9 @@
+CREATE TABLE sakila.inventory (
+  inventory_id INTEGER NOT NULL AUTOINCREMENT,
+  film_id SMALLINT NOT NULL,
+  store_id TINYINT NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY  (inventory_id)
+--   CONSTRAINT fk_inventory_store FOREIGN KEY (store_id) REFERENCES store (store_id) ON DELETE RESTRICT ON UPDATE CASCADE,
+--   CONSTRAINT fk_inventory_film FOREIGN KEY (film_id) REFERENCES film (film_id) ON DELETE RESTRICT ON UPDATE CASCADE
+);

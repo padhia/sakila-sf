@@ -1,0 +1,16 @@
+CREATE TABLE sakila.staff (
+  staff_id TINYINT NOT NULL AUTOINCREMENT,
+  first_name VARCHAR(45) NOT NULL,
+  last_name VARCHAR(45) NOT NULL,
+  address_id SMALLINT NOT NULL,
+  picture BINARY,
+  email VARCHAR(50) DEFAULT NULL,
+  store_id TINYINT NOT NULL,
+  active BOOLEAN NOT NULL DEFAULT TRUE,
+  username VARCHAR(16) NOT NULL,
+  password VARCHAR(40) DEFAULT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY  (staff_id)
+--   CONSTRAINT fk_staff_store FOREIGN KEY (store_id) REFERENCES store (store_id) ON DELETE RESTRICT ON UPDATE CASCADE,
+--   CONSTRAINT fk_staff_address FOREIGN KEY (address_id) REFERENCES address (address_id) ON DELETE RESTRICT ON UPDATE CASCADE
+);

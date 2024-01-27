@@ -1,0 +1,8 @@
+CREATE TABLE sakila.city (
+  city_id SMALLINT NOT NULL AUTOINCREMENT,
+  city VARCHAR(50) NOT NULL,
+  country_id SMALLINT NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY  (city_id),
+  CONSTRAINT fk_city_country FOREIGN KEY (country_id) REFERENCES country (country_id) ON DELETE RESTRICT ON UPDATE CASCADE
+);
